@@ -16,12 +16,12 @@ void bubble_sort(int *array, size_t size)
 {
 int i;
 int j;
-size_t n = 10;
+size_t p = sizeof(array) / sizeof(array[0]);
 int temp;
-
-for(j = 0; j < n; j++) 
+printf("%d",p);
+for(j = 0; j < p; j++) 
 {
-    for (i = 0; i < n; i++)
+    for (i = 0; i < p; i++)
     {
     if(array[i+1] < array[i])
     {
@@ -29,7 +29,7 @@ for(j = 0; j < n; j++)
         array[i] = array[i+1];
         array[i+1] = temp;
     }
-    print_array(array, n);
+    print_array(array, p);
     }
 }
 }
