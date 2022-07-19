@@ -28,7 +28,6 @@ for(j = 0; j < size; j++)
         array[i] = array[i+1];
         array[i+1] = temp;
     }
-    print_array(array, size);
     }
 }
 }
