@@ -2,6 +2,7 @@
 #define __SORT_H__
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
 
 void bubble_sort(int *array, size_t size);
 /**
