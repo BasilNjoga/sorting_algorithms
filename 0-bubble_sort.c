@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * bubble_sort - this is a function to sort out an array of integers 
+ * bubble_sort - this is a function to sort out an array of integers
  * using bubble sort
- * 
+ *
  * @array: array of integers passed
  * @size: size of integers requred
- * 
+ *
  * Return: Nothing
  */
 
@@ -17,7 +17,7 @@ size_t i;
 size_t j;
 int temp;
 
-for(j = 0; j < size; j++) 
+for(j = 0; j < size; j++)
 {
     for (i = 0; i < size; i++)
     {
