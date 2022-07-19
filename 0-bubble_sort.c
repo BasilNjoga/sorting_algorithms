@@ -14,14 +14,13 @@
 
 void bubble_sort(int *array, size_t size)
 {
-int i;
-int j;
-size_t p = sizeof(array) / sizeof(array[0]);
+size_t i;
+size_t j;
 int temp;
-printf("%d",p);
-for(j = 0; j < p; j++) 
+
+for(j = 0; j < size; j++) 
 {
-    for (i = 0; i < p; i++)
+    for (i = 0; i < size; i++)
     {
     if(array[i+1] < array[i])
     {
@@ -29,7 +28,7 @@ for(j = 0; j < p; j++)
         array[i] = array[i+1];
         array[i+1] = temp;
     }
-    print_array(array, p);
+    print_array(array, size);
     }
 }
 }
