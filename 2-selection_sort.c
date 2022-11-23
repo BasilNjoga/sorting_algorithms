@@ -1,37 +1,34 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "sort.h"
-
 /**
- * selection_sort - this is a function that perfoms a selection sort
- *
- * @array: array to be sorted
- * @size: size of the array to be sorted
- * Return: Nothing
+ * selection_sort - sorts all selecty like
+ * @array: array to sort
+ * @size: size of array
  */
-
 void selection_sort(int *array, size_t size)
 {
-	size_t j;
-	size_t i;
-	int tempvalue;
-	int movingnumber;
-	int movingnumberindex;
+int index = 0, min, tmp;
+size_t i, j;
 
-	for (i = 0; i < size - 1; i++)
-	{
-		tempvalue = array[i];
-		movingnumber = array[i];
-		for (j = i; j < size - 1; j++)
-		{
-			if (tempvalue > array[j + 1])
-			{
-				tempvalue = array[j + 1];
-				movingnumberindex = j + 1;
-			}
-		}
-		array[i] = tempvalue;
-		array[movingnumberindex] = movingnumber;
-		print_array(array, size);
-	}
+if (array == NULL || size < 2)
+return;
+
+for (i = 0; i < size - 1; i++)
+{
+min = array[i];
+for (j = i + 1; j < size; j++)
+{
+if (array[j] < min)
+{
+min = array[j];
+index = j;
+}
+}
+if (min != array[i])
+{
+tmp = array[i];
+array[i] = array[index];
+array[index] = tmp;
+print_array(array, size);
+}
+}
 }
